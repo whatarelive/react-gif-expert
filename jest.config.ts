@@ -1,4 +1,4 @@
-export const testData = {
-    testEnvironment: 'jest-environment-jsdom',
-    setupFiles: ['.jest.setup.ts']
-}
+module.exports = {
+     testEnvironment: 'jest-environment-jsdom',
+     setupFiles: ['./jest.setup.ts']
+ }
