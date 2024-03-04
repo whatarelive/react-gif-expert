@@ -9,8 +9,6 @@ import {GifGridProps} from "../Types/types";
 export const GifGrid = ({ category }: GifGridProps ) => {
 
     const { images, isLoading } = useFecthGifs( category );
-
-    console.log( isLoading );
     
     // Renderizado del componente.
     return (

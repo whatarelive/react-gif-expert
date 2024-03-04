@@ -1,11 +1,11 @@
 import { GifType } from "../Types/types"
 
-export const GifItem = ( image: GifType ) => {
+export const GifItem = ( { title, url }: GifType ) => {
 
     return (
          <div className="card-item">          
-            <img src={ image.url } alt={ image.title } /> 
-            <p>{ image.title }</p>
+            <img src={ url } alt={ title } /> 
+            <p>{ title }</p>
         </div>      
     )
 }

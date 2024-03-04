@@ -20,7 +20,7 @@ export type Gifs = {
 
 // Type de la gif-card-item.
 export type GifType = {
-    id: string,
-    title: string,
-    url: string,
+    readonly id: string,
+    readonly title: string,
+    readonly url: string,
 }

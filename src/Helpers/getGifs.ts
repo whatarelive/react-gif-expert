@@ -8,11 +8,9 @@ export const getGifs = async( category: string ) => {
     const response = await fetch( url );
     const { data }: Gifs = await response.json();
 
-    const gifs = data.map(img => ({
+    return data.map(img => ({
         id: img.id,
         title: img.title,
         url: img.images.downsized_medium.url,
     }));
-
-    return gifs;
 }
