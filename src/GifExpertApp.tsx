@@ -1,22 +1,13 @@
 // Librerias de React.
-import {useState} from "react";
 // Componentes hijos.
 import { AddCategory, GifGrid } from "./Components";
+import { useCategory } from "./hooks/useCategory";
 
 
 export const GifExpertApp = () => {
 
-    // Estado que contiene el listado de las categorias de los gifs.
-    const [ categories, setCategories ] = useState(['One Punch']);
-
-    // Funcion que agrega una nueva categoria al estado inicial.
-    const onAddCategory = ( newCategory: string ) => {
-        
-        // Validacion para saber si la nueva categoria no se encuentra del useState.
-        if ( !categories.includes( newCategory ) ) {
-            setCategories([ newCategory, ...categories ]);
-        }
-    }
+    // Custom Hook: que devuelve el Estado que contiene el listado de las categorias de los gifs.
+    const {categories, onAddCategory}  = useCategory('One Punch')
 
     // Funcion que crea el listado de elementos.
     const listItem = () => {
