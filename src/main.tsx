@@ -8,9 +8,9 @@ import {GifExpertApp} from "./GifExpertApp.tsx";
 
 const root = document.getElementById('root');
 
-if (root instanceof HTMLDivElement) {
+if (root instanceof HTMLElement) {
 
-    ReactDOM.createRoot(root).render(
+    ReactDOM.createRoot( root ).render(
         <React.StrictMode>
                 <GifExpertApp/>
         </React.StrictMode>

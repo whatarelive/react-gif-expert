@@ -36,6 +36,7 @@ describe('Pruebas en el componente <GifItem />', () => {
         expect( alt ).toBe( title );
     });
 
+    // Test #3: sobre la informacion a mostrar en el componenete.
     test('debe mostrar el titulo en el en el componente ', () => {
 
         // Renderizamos el componente.
